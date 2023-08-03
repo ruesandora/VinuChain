@@ -5,17 +5,13 @@
 > Arkadaşlar acelemiz yok adım adım gidin, ufak bir hatada çıkmaz bir yola girmiş olunabiliyor acele yok.
 
 ```
-# ipAdresinizi giriniz
-ssh root@ipAdresin
-```
-
-```
 sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install ufw
 
 sudo ufw enable
 
+sudo ufw allow 22
 sudo ufw allow 5050
 sudo ufw allow 4000
 sudo ufw allow 3000
@@ -41,20 +37,14 @@ sudo nano /etc/sudoers
 # Fotoğrafta gösterdiğim gibi ekleyiniz.
 kullanıcıAdınız ALL=(ALL:ALL) ALL
 # CTRL + X + Y + ENTER ile kaydedip çıkıyoruz.
-# Sonra çıkış yapıyoruz:
-exit
 ```
 
 ![image](https://github.com/ruesandora/VinuChain/assets/101149671/0119282a-d7bb-4b43-bae7-824ee5c2be11)
 
 ```
-# root değilde oluşturduğumuz kullanicida işlem yapalim
-ssh kullaniciAdiniz@ipAdres
-
+# bu paketi yükleyelim:
 sudo apt-get install -y build-essential
-```
 
-```
 # go'yu yükleyelim:
 wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 sudo tar -xvf go1.19.3.linux-amd64.tar.gz
@@ -63,7 +53,7 @@ sudo mv go /usr/local
 
 ```
 # nano ile dosyanın içersine girelim:
-. ~/.bash_aliases
+nano ~/.bash_aliases
 
 # Bu değerleri dosyanın içine yapıştırın ve kaydedip çıkın.
 export GOROOT=/usr/local/go
@@ -76,7 +66,7 @@ go version
 ```
 
 ```
-# Opera'yı yükleyelim:
+# Opera'yı ve VinuChain'i yükleyelim:
 git clone https://github.com/VinuChain/VinuChain
 cd VinuChain/
 make
