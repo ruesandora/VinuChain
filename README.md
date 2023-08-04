@@ -1,10 +1,31 @@
 <h1 align="center"> VinuChain </h1>
 
-> Uzun bir seriven başlasın
+> VinuChain ile bir süredir ilgileniyorum, bir kaç gündür de validatörünü çalıştırıyorum.
 
-> Arkadaşlar acelemiz yok adım adım gidin, ufak bir hatada çıkmaz bir yola girmiş olunabiliyor acele yok.
+> Ödül konusuna aldığım cevap; `Validatörünüz ne kadar çalışırsa o kadar testnet ödülü`, siz yinede sorun isterseniz.
 
-> Kod bloklarında ki notlarımı okuyun lütfen, ricamdır.
+> Ne kadar sürecek sorusuna aldığım cevap `1.5 ay`, tahmini maliyetim: `Hetznerde $6.`
+
+> `Lütfen kod bloklarında ve dışında yazdığım her şeyi okuyunuz, nedenini çok iyi anlayacaksınız.`
+
+> Topluluk kanalları: [Duyurular](https://t.me/RuesAnnouncement) - [Sorularınız İçin](https://t.me/RuesChat) - [VinuChain Discord](https://discord.gg/vinu) - [Explorer](https://vinuscan.com/)
+
+<h1 align="center"> Donanım </h1>
+
+> Sunucu olarak [Hetzner Kullanıyorum](https://github.com/ruesandora/Hetzner/blob/main/README.md)
+
+```
+# Benim kullandığım: 
+2 CPU - 4 RAM - 80 SSD
+
+# Dökümasyon önerisi:
+4 CPU - 16 RAM - 500 SSD
+```
+
+> Benim sunucumda kullanım görselde ki gibi:
+
+![image](https://github.com/ruesandora/VinuChain/assets/101149671/768975b6-1737-4ab4-88f2-9a91ffb23f76)
+
 
 <h1 align="center"> Sistem güncellemelerimiz </h1>
 
