@@ -175,7 +175,7 @@ ftm.getTransactionReceipt("txAdresi")
 # Veya explorerdan aratabilirsiniz tx'inizi.
 
 # Yukarıda validator ID'ınıze bakmıştık 0'dı çünkü oluşturmamıştık, şimdi ise:
-sfc.getValidatorID("kısaCüzdanAdresi")
+sfcc.getValidatorID("kısaCüzdanAdresi")
 # Bir sayı çıktısı almalısınız , çıktı neyse mesela 15, 15. validatörsünüz ve bu ID'yi saklayın not edin!
 ```
 
