@@ -4,6 +4,7 @@
 
 > Arkadaşlar acelemiz yok adım adım gidin, ufak bir hatada çıkmaz bir yola girmiş olunabiliyor acele yok.
 
+> Kod bloklarında ki notlarımı okuyun lütfen, ricamdır.
 
 <h1 align="center"> Sistem güncellemelerimiz </h1>
 
@@ -100,23 +101,20 @@ tail -f opera.log
 
 <h1 align="center"> Dikkat ediilmesi gereken noktalar </h1>
 
-> Sırada ki işlemlerde, iki key oluşturuyoruz, biri public adres diğeri public key.
+> DİKKAT: Sırada ki işlemlerde, iki key oluşturuyoruz, biri public adres diğeri public key.
 
-> İsmen aynı olabilir lakin farklılıklarını anlatacağım. Zaten birisi kısa birisi uzun olacak.
+> DİKKAT: İsmen aynı olabilir lakin farklılıklarını anlatacağım. Zaten birisi kısa birisi uzun olacak.
 
-> Kod bloklarında ki notlarımı okuyun lütfen, ricamdır.
+> DİKKAT: Bu komutlar sonrasında winscp ile `/root/.opera/keystore/` içersinde ki UTC dosyasını ve validatör klasörünü saklayın!
 
 ```sh
-# Burada oluşturulan cüzdan biligisi ve secret key file'ı kaydedelim.
 # Bu public adresdir. Kısa olandır.
 ./opera account new
 # account new ile oluşan cüzdana discorddan test tokeni isteyelim. 100k token. 1 tanede fee için olsun. 100.001
 
-## BURADA ARAYA GİRMEK İSTİYORUM: Bende 1 milyon token var, yetişirseniz ilk 10 kişiye token verebilirim, token bulmak sıkıntı olabilir.
-
 # Bu çıktıda ki bilgileri de kaydedelim.
-# Bu public keydir. Uzun olandır.
 ./opera validator new
+# Bu public keydir. Uzun olandır.
 
 # bu çıktılarda ki bilgileri ve şifreyi kaybederseniz çözümü yok asla, yeni validator kurmanız gerekir.
 ```
@@ -128,7 +126,9 @@ tail -f opera.log
 ./opera attach
 ```
 
-> Açılan ">" konsoluna [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) değişkenleri girip enterlayın.
+> DİKKAT: Sunucunuzda Açılan ">" konsoluna [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) değişkenleri girip enterlayın.
+
+> Daha basit bir ifade ile; [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) linkten komutu kopyalayıp yapıştırın.
 
 ```sh
 # Bir yeri düzenlemenize gerek yok, abi kontratını başlatalım:
