@@ -57,7 +57,7 @@ sudo chown -R $USER:$USER /home/$USER/
 sudo chmod 700 /home/$USER/.ssh
 sudo chmod 644 /home/$USER/.ssh/authorized_keys
 
-# Burada şire isteyecek, belirleyin ve bu şifreleri unutmayın kaydedin
+# Giriş yapınız bu klasöre:
 sudo nano /etc/sudoers
 
 # Fotoğrafta gösterdiğim gibi ekleyiniz. (Kullanıcı adını unutmayın)
