@@ -148,9 +148,31 @@ personal.unlockAccount("KısaCüzdanAdresi", "Şifre", 300)
 # Şimdi register edelim validatörümüzü:
 tx = sfcc.createValidator("UzunCüzdanAdresi", {from:"kısaCüzdanAdresi", value: web3.toWei("100000.0", "ftm")})
 # Eğer token yoksa çalışmaz, sorun yoksa yeşil yanan bir TX çıktısı alırsınız.
+
+# TX'i kontrol edelim bu komutla, en sonda status: 0x1 çıktısı vermeli.
+ftm.getTransactionReceipt("txAdresi")
+# Veya explorerdan aratabilirsiniz tx'inizi.
+
+# Yukarıda validator ID'ınıze bakmıştık 0'dı çünkü oluşturmamıştık, şimdi ise:
+sfc.getValidatorID("kısaCüzdanAdresi")
+# Bir sayı çıktısı almalısınız , çıktı neyse mesela 15, 15. validatörsünüz ve bu ID'yi saklayın not edin!
 ```
 
+<h1 align="center"> Node işlemleri tamam şimdi Validatörde </h1>
 
+```
+# Operaya kill çekelim bu olmak zorunda:
+pkill opera
 
+# Yukarıda ki şifremizi password.txt dosyasına girip kaydedelim.
+nano password.txt
+# Bu klasörün içine şifrenizi yazın ve CTRL X Y ENTER ile çıkın kaydedip.
+```
 
+```
+# Son adım:
 
+nohup ./opera --bootnodes enode://3c4da2358ce3c3e117b03e4c87dff1d8d767a684e3c94f5eb29a4e88f549ba2f5a458eab60df637417411bb59b52f94542cf7d22f0dd1a10e45d5ae71c66e334@54.203.151.219:3000 --validator.id <ValidatorIDniz> --validator.pubkey <UzunAdres> --validator.password password.txt > validator.log &
+
+# Bu komutta iki şey değişiyoruz, ValidatorID ve UzunAdresi, lütfen içine yazıp < > işaretlerini kaldırın.
+```
