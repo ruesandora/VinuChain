@@ -202,3 +202,22 @@ tail -f validator.log
 ```
 
 > Validatorunuzu [buradan](https://vinuscan.com/staking) kontrol edin (ID'si ile) downtime 0 ise sorun yok, artıyorsa node'u kontrol etmek gerekir.
+
+<h1 align="center"> Konu dışı </h1>
+
+> VinuChain bir meme token değil merak etmeyin. Ahım şahım bir proje değil ama maliyeti düşük ve çalıştıracağım ben.
+
+> Madem buraya kadar okudunuz, elimde 1 milyon VC (VinuChain) token var, rueschatten yazan ilk 10 kişiye 100k veriyorum, token temin etmesi benim için 5 gün sürdü lol.
+
+>  Topluluk kanalları: [Duyurular](https://t.me/RuesAnnouncement) - [Sorularınız İçin](https://t.me/RuesChat) - [VinuChain Discord](https://discord.gg/vinu) - [Explorer](https://vinuscan.com/)
+
+> Daha ekleyecek yorumlarım vb. şeyler olabilir onun için yukarıdan yıldızlayın takibinizde olsun, eksik görürseniz PR atabilirsin, si yu!
+
+
+
+
+
+
+
+
+
