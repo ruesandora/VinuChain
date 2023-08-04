@@ -101,11 +101,11 @@ tail -f opera.log
 
 <h1 align="center"> Dikkat ediilmesi gereken noktalar </h1>
 
-> DİKKAT: Sırada ki işlemlerde, iki key oluşturuyoruz, biri public adres diğeri public key.
+> DİKKAT: Sırada ki işlemlerde, `iki key` oluşturuyoruz, biri `public adres` diğeri `public key`.
 
-> DİKKAT: İsmen aynı olabilir lakin farklılıklarını anlatacağım. Zaten birisi kısa birisi uzun olacak.
+> DİKKAT: İsmen aynı olabilir lakin farklılıklarını anlatacağım. Zaten birisi `kısa` birisi `uzun` olacak.
 
-> DİKKAT: Bu komutlar sonrasında winscp ile `/root/.opera/keystore/` içersinde ki UTC dosyasını ve validatör klasörünü saklayın!
+> DİKKAT: Bu komutlar sonrasında winscp ile `/root/.opera/keystore/` içersinde ki `UTC` dosyasını ve `validatör` klasörünü saklayın!
 
 ```sh
 # Bu public adresdir. Kısa olandır.
@@ -171,7 +171,6 @@ nano password.txt
 
 ```sh
 # Son adım:
-
 nohup ./opera --bootnodes enode://3c4da2358ce3c3e117b03e4c87dff1d8d767a684e3c94f5eb29a4e88f549ba2f5a458eab60df637417411bb59b52f94542cf7d22f0dd1a10e45d5ae71c66e334@54.203.151.219:3000 --validator.id <ValidatorIDniz> --validator.pubkey <UzunAdres> --validator.password password.txt > validator.log &
 
 # Bu komutta iki şey değişiyoruz, ValidatorID ve UzunAdresi, lütfen içine yazıp < > işaretlerini kaldırın.
