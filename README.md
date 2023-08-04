@@ -24,7 +24,7 @@
 
 > Benim sunucumda kullanım görselde ki gibi:
 
-![image](https://github.com/ruesandora/VinuChain/assets/101149671/768975b6-1737-4ab4-88f2-9a91ffb23f76)
+![image](https://github.com/ruesandora/VinuChain/assets/101149671/4ccb5329-e04a-4552-ae54-b391703d2f6b)
 
 
 <h1 align="center"> Sistem güncellemelerimiz </h1>
@@ -65,7 +65,7 @@ kullanıcıİsminiz ALL=(ALL:ALL) ALL
 # CTRL + X + Y + ENTER ile kaydedip çıkıyoruz.
 ```
 
-![image](https://github.com/ruesandora/VinuChain/assets/101149671/0119282a-d7bb-4b43-bae7-824ee5c2be11)
+![image](https://github.com/ruesandora/VinuChain/assets/101149671/de311c2d-6ab1-4b03-8075-df4861a3a0c2)
 
 <h1 align="center"> Go ve bazı kütüphaneler </h1>
 
