@@ -1,14 +1,18 @@
-# VinuChain
+<h1 align="center"> VinuChain </h1>
 
 > Uzun bir seriven başlasın
 
 > Arkadaşlar acelemiz yok adım adım gidin, ufak bir hatada çıkmaz bir yola girmiş olunabiliyor acele yok.
 
-```
-sudo apt-get update && sudo apt-get upgrade -y
 
+<h1 align="center"> Sistem güncellemelerimiz </h1>
+
+```
+# Sistem güncellemeleri
+sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install ufw
 
+# Yes diyebilirsiz portlarınız açık değilse
 sudo ufw enable
 
 sudo ufw allow 22
@@ -17,8 +21,10 @@ sudo ufw allow 4000
 sudo ufw allow 3000
 ```
 
+<h1 align="center"> Değişkenler </h1>
+
 ```
-# rues yazan yere bir kullanıcı ismi verin.
+# rues yazan yere bir kullanıcı ismi verin
 USER=rues
 
 sudo mkdir -p /home/$USER/.ssh
@@ -28,18 +34,18 @@ sudo usermod -aG sudo $USER
 sudo chown -R $USER:$USER /home/$USER/
 sudo chmod 700 /home/$USER/.ssh
 sudo chmod 644 /home/$USER/.ssh/authorized_keys
-```
 
-```
-# şire isteyecek, belirleyin ve bu şifreleri unutmayın kaydedin
+# Burada şire isteyecek, belirleyin ve bu şifreleri unutmayın kaydedin
 sudo nano /etc/sudoers
 
-# Fotoğrafta gösterdiğim gibi ekleyiniz.
-kullanıcıAdınız ALL=(ALL:ALL) ALL
+# Fotoğrafta gösterdiğim gibi ekleyiniz. (Kullanıcı adını unutmayın)
+kullanıcıİsminiz ALL=(ALL:ALL) ALL
 # CTRL + X + Y + ENTER ile kaydedip çıkıyoruz.
 ```
 
 ![image](https://github.com/ruesandora/VinuChain/assets/101149671/0119282a-d7bb-4b43-bae7-824ee5c2be11)
+
+<h1 align="center"> Go ve bazı kütüphaneler </h1>
 
 ```
 # bu paketi yükleyelim:
@@ -49,9 +55,7 @@ sudo apt-get install -y build-essential
 wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 sudo tar -xvf go1.19.3.linux-amd64.tar.gz
 sudo mv go /usr/local
-```
 
-```
 # nano ile dosyanın içersine girelim:
 nano ~/.bash_aliases
 
@@ -64,6 +68,8 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 source ~/.bash_aliases
 go version
 ```
+
+<h1 align="center"> VinuChain </h1>
 
 ```
 # Opera'yı ve VinuChain'i yükleyelim:
