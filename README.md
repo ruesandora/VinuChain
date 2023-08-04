@@ -175,4 +175,10 @@ nano password.txt
 nohup ./opera --bootnodes enode://3c4da2358ce3c3e117b03e4c87dff1d8d767a684e3c94f5eb29a4e88f549ba2f5a458eab60df637417411bb59b52f94542cf7d22f0dd1a10e45d5ae71c66e334@54.203.151.219:3000 --validator.id <ValidatorIDniz> --validator.pubkey <UzunAdres> --validator.password password.txt > validator.log &
 
 # Bu komutta iki şey değişiyoruz, ValidatorID ve UzunAdresi, lütfen içine yazıp < > işaretlerini kaldırın.
+
+# Logu kontrol edelim validatör için:
+tail -f validator.log
+# Akıyorsa no problemo
 ```
+
+> Validatorunuzu [buradan](https://vinuscan.com/staking) kontrol edin (ID'si ile) downtime 0 ise sorun yok, artıyorsa node'u kontrol etmek gerekir.
