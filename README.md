@@ -69,7 +69,7 @@ source ~/.bash_aliases
 go version
 ```
 
-<h1 align="center"> VinuChain </h1>
+<h1 align="center"> VinuChain ve Opera </h1>
 
 ```
 # Opera'yı ve VinuChain'i yükleyelim:
@@ -79,56 +79,76 @@ make
 
 # version kontrol; 1.1.2-rc.3
 ./build/opera version
-```
 
-```
+# doğru dizine gidelim:
 cd
 cd VinuChain
 cd build/
 
+# Genesisi yükleyelim
 wget https://tinyurl.com/genesis-testnet
 
-# Değişmesi gereken bir şey yok.
+# Burada opera log ile node'u başlatıyoruz, değişmesi gereken bir yer yok.
 nohup ./opera --port 3000 --nat any --genesis genesis-testnet --genesis.allowExperimental --bootnodes enode://3c4da2358ce3c3e117b03e4c87dff1d8d767a684e3c94f5eb29a4e88f549ba2f5a458eab60df637417411bb59b52f94542cf7d22f0dd1a10e45d5ae71c66e334@54.203.151.219:3000 > opera.log &
 
 # yukarıda ki komuttan sonra "nohup: ignoring input.." çıktısı verecek, enter diyoruz.
 tail -f opera.log
-# bu komutla loglar akacak daha sonrasında.
-# sync olmak 4-5 dk sürer bekleyin, explorerdan bakarsınız blok sayısına.
+# Bu komuttan sonra loglar hızlıca akacak ve 2-3 dkya sync olacaksınız, explorerdan bakarsınız blok sayısına.
+
+# Explorer gibi bir çok temel linkler vs. reponun sonunda veya başında bulundururum.
 ```
 
-```
-# İki key oluşturuyoruz, biri public adres diğeri public key.
-# İsmen aynı olabilir lakin farklılıklarını anlatacağım.
+<h1 align="center"> Dikkat ediilmesi gereken noktalar </h1>
 
+> Sırada ki işlemlerde, iki key oluşturuyoruz, biri public adres diğeri public key.
+
+> İsmen aynı olabilir lakin farklılıklarını anlatacağım. Zaten birisi kısa birisi uzun olacak.
+
+> Kod bloklarında ki notlarımı okuyun lütfen, ricamdır.
+
+```
 # Burada oluşturulan cüzdan biligisi ve secret key file'ı kaydedelim.
-# Bu public adresdir.
+# Bu public adresdir. Kısa olandır.
 ./opera account new
-# account new ile oluşan cüzdana discorddan test tokeni isteyelim veya faucet. 100k token.
+# account new ile oluşan cüzdana discorddan test tokeni isteyelim. 100k token. 1 tanede fee için olsun. 100.001
+
+## BURADA ARAYA GİRMEK İSTİYORUM: Bende 1 milyon token var, yetişirseniz ilk 10 kişiye token verebilirim, token bulmak sıkıntı olabilir.
 
 # Bu çıktıda ki bilgileri de kaydedelim.
-# Bu public keydir.
+# Bu public keydir. Uzun olandır.
 ./opera validator new
 
-# bu çıktılarda ki bilgileri ve şifreyi kaybederseniz çözümü yok asla.
+# bu çıktılarda ki bilgileri ve şifreyi kaybederseniz çözümü yok asla, yeni validator kurmanız gerekir.
 ```
+
+<h1 align="center"> İşlemlerimize JavaScript ile devam edeceğiz </h1>
 
 ```
 # şimdi bir javascript konsolu oluşturacağız
 ./opera attach
 ```
 
-> Açılan > konsoluna [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) değerleri girip enterlayın.
+> Açılan ">" konsoluna [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) değişkenleri girip enterlayın.
 
 ```
-# " " arasında public adresimizi girelim:
+# Bir yeri düzenlemenize gerek yok, abi kontratını başlatalım:
 sfcc = web3.ftm.contract(abi).at("0xfc00face00000000000000000000000000000000")
-```
 
-```
 # bu komutta sıfır dışında bir çıktı almalısınız (aktif validatör sayısı)
 sfcc.lastValidatorID() 
 
+# Buradan validator ID'ınıze bakın:
+sfcc.getValidatorID("KısaCüzdanAdresi")
+# Çıktıda 0 çıkması gerekiyor çünkü henüz validatör oluşturmadık, 0 dışında bir şey varsa hata.
+
+# validatör cüzdanımızı unlock ediyoruz:
+personal.unlockAccount("KısaCüzdanAdresi", "Şifre", 300)
+# Burada ki şifreyi zaten yukarıda belirtmiştik, bu komutun çıktısı TRUE olacaktır.
+
+# Şimdi register edelim validatörümüzü:
+tx = sfcc.createValidator("UzunCüzdanAdresi", {from:"kısaCüzdanAdresi", value: web3.toWei("100000.0", "ftm")})
+# Eğer token yoksa çalışmaz, sorun yoksa yeşil yanan bir TX çıktısı alırsınız.
+```
 
 
 
