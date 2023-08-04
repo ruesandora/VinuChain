@@ -207,17 +207,10 @@ tail -f validator.log
 
 > VinuChain bir meme token değil merak etmeyin. Ahım şahım bir proje değil ama maliyeti düşük ve çalıştıracağım ben.
 
-> Madem buraya kadar okudunuz, elimde 5 milyon VC (VinuChain) token var, rueschatten yazan `ilk 50 kişiye 100k` veriyorum.
+> Madem buraya kadar okudunuz, elimde 2 milyon VC (VinuChain) token var, rueschatten yazan `ilk 20 kişiye 100k` veriyorum.
 
 >  Topluluk kanalları: [Duyurular](https://t.me/RuesAnnouncement) - [Sorularınız İçin](https://t.me/RuesChat) - [VinuChain Discord](https://discord.gg/vinu) - [Explorer](https://vinuscan.com/)
 
-> Daha ekleyecek yorumlarım vb. şeyler olabilir onun için yukarıdan yıldızlayın takibinizde olsun, eksik görürseniz PR atabilirsin, si yu!
-
-
-
-
-
-
-
+> Daha ekleyecek yorumlarım vb. şeyler olabilir onun için yukarıdan yıldızlayın takibinizde olsun, eksik görürseniz PR atabilirsin, si yu
 
 
