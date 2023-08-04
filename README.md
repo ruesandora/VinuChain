@@ -7,7 +7,7 @@
 
 <h1 align="center"> Sistem güncellemelerimiz </h1>
 
-```
+```sh
 # Sistem güncellemeleri
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install ufw
@@ -23,7 +23,7 @@ sudo ufw allow 3000
 
 <h1 align="center"> Değişkenler </h1>
 
-```
+```sh
 # rues yazan yere bir kullanıcı ismi verin
 USER=rues
 
@@ -47,7 +47,7 @@ kullanıcıİsminiz ALL=(ALL:ALL) ALL
 
 <h1 align="center"> Go ve bazı kütüphaneler </h1>
 
-```
+```sh
 # bu paketi yükleyelim:
 sudo apt-get install -y build-essential
 
@@ -71,7 +71,7 @@ go version
 
 <h1 align="center"> VinuChain ve Opera </h1>
 
-```
+```sh
 # Opera'yı ve VinuChain'i yükleyelim:
 git clone https://github.com/VinuChain/VinuChain
 cd VinuChain/
@@ -106,7 +106,7 @@ tail -f opera.log
 
 > Kod bloklarında ki notlarımı okuyun lütfen, ricamdır.
 
-```
+```sh
 # Burada oluşturulan cüzdan biligisi ve secret key file'ı kaydedelim.
 # Bu public adresdir. Kısa olandır.
 ./opera account new
@@ -123,14 +123,14 @@ tail -f opera.log
 
 <h1 align="center"> İşlemlerimize JavaScript ile devam edeceğiz </h1>
 
-```
+```sh
 # şimdi bir javascript konsolu oluşturacağız
 ./opera attach
 ```
 
 > Açılan ">" konsoluna [buradaki](https://github.com/ruesandora/VinuChain/blob/main/SFC_JSON.parse) değişkenleri girip enterlayın.
 
-```
+```sh
 # Bir yeri düzenlemenize gerek yok, abi kontratını başlatalım:
 sfcc = web3.ftm.contract(abi).at("0xfc00face00000000000000000000000000000000")
 
@@ -160,7 +160,7 @@ sfc.getValidatorID("kısaCüzdanAdresi")
 
 <h1 align="center"> Node işlemleri tamam şimdi Validatörde </h1>
 
-```
+```sh
 # Operaya kill çekelim bu olmak zorunda:
 pkill opera
 
@@ -169,7 +169,7 @@ nano password.txt
 # Bu klasörün içine şifrenizi yazın ve CTRL X Y ENTER ile çıkın kaydedip.
 ```
 
-```
+```sh
 # Son adım:
 
 nohup ./opera --bootnodes enode://3c4da2358ce3c3e117b03e4c87dff1d8d767a684e3c94f5eb29a4e88f549ba2f5a458eab60df637417411bb59b52f94542cf7d22f0dd1a10e45d5ae71c66e334@54.203.151.219:3000 --validator.id <ValidatorIDniz> --validator.pubkey <UzunAdres> --validator.password password.txt > validator.log &
